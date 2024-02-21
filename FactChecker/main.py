@@ -1,7 +1,10 @@
 from tabulate import tabulate
 from newsscraping import NewsScraper
 from frauddetection import FraudDetector
-from similarity import RelevantContextRetriever
+from similarity import RelevantContextRetriever, RelevantContextRetriever2
+
+import warnings
+warnings.filterwarnings('ignore')
 
 if __name__ == "__main__":
     print("\n\nI am a Fact Checking Robot.")
@@ -9,6 +12,7 @@ if __name__ == "__main__":
     news_scraper = NewsScraper()   
     fraud_detector = FraudDetector()
     relevant_context_retriever = RelevantContextRetriever()
+    relevant_context_retriever2 = RelevantContextRetriever2()
     
     while True:
         query = input("You can type q to exit, or input the statement you want to fact-check: ")
@@ -20,7 +24,8 @@ if __name__ == "__main__":
         context_df = news_scraper(query)
         print('Done news scraping.')
         print('Building relevant prompt...')
-        relevant_context_df = relevant_context_retriever(query, context_df)
+        relevant_context_df = relevant_context_retriever2(query, context_df)
+        relevant_context_df = relevant_context_retriever(query, relevant_context_df)
         print('Built relevant prompt.')
         
         print('Show relevant content:')

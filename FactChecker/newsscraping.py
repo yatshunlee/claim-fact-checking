@@ -1,3 +1,4 @@
+import sys
 from pandas import DataFrame
 from googlesearch import search
 from newsplease import NewsPlease
@@ -15,8 +16,12 @@ class NewsScraper:
         gsq = self.google_search_query.format(query=query)
         
         urls = []
-        for url in search(gsq, stop=num_results, tbs=tbs):
-            urls.append(url)
+        try:        
+            for url in search(gsq, stop=num_results, tbs=tbs):
+                urls.append(url)
+        except:
+            print('The quota of Google Search API met its limit. See you 1 - 2 hours later! Goodbye!')
+            sys.exit(0)
         
         return urls
     
