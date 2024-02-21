@@ -4,7 +4,7 @@ from sklearn.neighbors import NearestNeighbors
 from sentence_transformers import SentenceTransformer
 
 class RelevantContextRetriever:
-    def __init__(self, num_results=3):
+    def __init__(self, num_results=5):
         self.embedding_model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
         self.knn = NearestNeighbors(n_neighbors=num_results)
         
@@ -20,6 +20,7 @@ class RelevantContextRetriever:
         # return searching result
         relevant = np.array(sentences)[coontent_indices][0] # index 0 is to turn into 1D
         return DataFrame({
+            'date_publish': context_df.date_publish.iloc[list(news_indices[0])].to_list(),
             'title': context_df.title.iloc[list(news_indices[0])].to_list(),
             'sentence': relevant
         })

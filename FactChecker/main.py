@@ -1,16 +1,17 @@
+from tabulate import tabulate
 from newsscraping import NewsScraper
 from frauddetection import FraudDetector
 from similarity import RelevantContextRetriever
 
 if __name__ == "__main__":
-    print("I am a Fact Checking Robot.")
+    print("\n\nI am a Fact Checking Robot.")
     
     news_scraper = NewsScraper()   
     fraud_detector = FraudDetector()
     relevant_context_retriever = RelevantContextRetriever()
     
     while True:
-        query = input("Do you fact-check any statement? You can exit by type q.\n")
+        query = input("You can type q to exit, or input the statement you want to fact-check: ")
         if query == "q":
             print("Goodbye!")
             break
@@ -22,6 +23,8 @@ if __name__ == "__main__":
         relevant_context_df = relevant_context_retriever(query, context_df)
         print('Built relevant prompt.')
         
+        print('Show relevant content:')
+        print(tabulate(relevant_context_df, headers='keys', tablefmt='psql'))
         context = []
         for i in range(relevant_context_df.shape[0]):
             title = relevant_context_df.at[i, 'title']
@@ -30,7 +33,6 @@ if __name__ == "__main__":
         
         context = '\n'.join(context)
         
-        print('Prompt for GPT3.5:')
-        
         response = fraud_detector(query, context)
         print(response)
+        print('\n')

@@ -14,8 +14,7 @@ class FraudDetector:
             'Your replying format: <Your answer> <evidence in simple words with source>'
         )
         
-    def __call__(self, query, context, temperature=1):
-        print(self.prompt.format(query=query, context=context))
+    def __call__(self, query, context, temperature=.5):
         session = self.client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[{
