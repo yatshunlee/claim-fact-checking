@@ -3,9 +3,9 @@ import openai
 from openai import OpenAI
 
 class FraudDetector:
-    def __init__(self):
-        with open('G:/Open API Key/OpenAI - jasperlee3-c.txt', 'r') as infile:
-            openai_api_key = infile.read()
+    def __init__(self, openai_api_key="REPLACEWITHYOUROPENAIAPIKEY"):
+        if openai_api_key == "REPLACEWITHYOUROPENAIAPIKEY":
+            raise ValueError("Replace with your openai api key.")
         self.client = OpenAI(api_key=openai_api_key)
         self.prompt = (
             'Based only on the context:\n'
