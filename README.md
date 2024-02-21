@@ -1,6 +1,8 @@
 # claim-fact-checking
 A cli, python based application to fact check a statement by comparing to relevant and recent news.
-
+### Usage
+1. replace with your valid openai api key in `frauddetection.py`
+2. run `python main.py`
 ### Architecture
 ![image](https://github.com/yatshunlee/claim-fact-checking/assets/69416199/2c6a94ca-9c95-4f64-9cee-346e188f337d)
 ### Fact Checker
