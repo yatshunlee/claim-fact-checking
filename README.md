@@ -11,6 +11,7 @@ conda activate claim-fact-check
 2. run `python main.py`
 ## Architecture
 [more about the architecture](https://yatshunlee.super.site/projects/llm-for-fact-checking)
+
 ![image](https://github.com/yatshunlee/claim-fact-checking/assets/69416199/2c6a94ca-9c95-4f64-9cee-346e188f337d)
 ## Fact Checker
 ### Check statement: Joe Biden told people not to vote
