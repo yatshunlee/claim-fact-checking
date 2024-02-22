@@ -26,7 +26,7 @@ conda activate claim-fact-check
 #### GPT 3.5
 ![image](https://github.com/yatshunlee/claim-fact-checking/assets/69416199/ae35abcf-0955-4743-b743-753ec157887a)
 #### Gemma-2b-it
-![image](https://github.com/yatshunlee/claim-fact-checking/assets/69416199/cb756a32-0453-4a51-a6b2-c20fc313452e)
+![image](https://github.com/yatshunlee/claim-fact-checking/assets/69416199/eb70817f-4dd9-46c7-bde2-76a452960681)
 ### Check statement: Taylor Swift Promoting Le Creuset Cookware
 ![image](https://github.com/yatshunlee/claim-fact-checking/assets/69416199/b1cd6117-3410-4fd8-8f5a-2af6e04bed98)
 #### GPT 3.5
