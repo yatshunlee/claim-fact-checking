@@ -10,9 +10,13 @@ conda activate claim-fact-check
 1. replace with your valid openai api key in `frauddetection.py`
 2. run `python main.py`
 ## Architecture
-[more about the architecture](https://yatshunlee.super.site/projects/llm-for-fact-checking)
-
 ![image](https://github.com/yatshunlee/claim-fact-checking/assets/69416199/2c6a94ca-9c95-4f64-9cee-346e188f337d)
+1. Retrieve a statement / query that the user wants to fact-check.
+2. Make it a better google search query: sites, keywords, time range.
+3. Perform webscrapping to get relevant news content about the query: Google Search, NewsPlease.
+4. Utilize text entailment to keep top relevent news by their titles. Then conduct sentence embedding and KNN to get the most relevant sentences in the news.
+5. Design the prompt by retrieval augmented generation (RAG).
+6. Fit into the GPT 3.5 model to generate a response.
 ## Fact Checker
 ### Check statement: Joe Biden told people not to vote
 ![image](https://github.com/yatshunlee/claim-fact-checking/assets/69416199/87ceed02-dafc-4d07-bec7-bb404efc0a3d)
