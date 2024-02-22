@@ -23,8 +23,10 @@ conda activate claim-fact-check
 ## Fact Checker
 ### Check statement: Joe Biden told people not to vote
 ![image](https://github.com/yatshunlee/claim-fact-checking/assets/69416199/87ceed02-dafc-4d07-bec7-bb404efc0a3d)
+#### GPT 3.5
 ![image](https://github.com/yatshunlee/claim-fact-checking/assets/69416199/ae35abcf-0955-4743-b743-753ec157887a)
-
+#### Gemma-2b-it
+![image](https://github.com/yatshunlee/claim-fact-checking/assets/69416199/cb756a32-0453-4a51-a6b2-c20fc313452e)
 ### Check statement: Taylor Swift Promoting Le Creuset Cookware
 ![image](https://github.com/yatshunlee/claim-fact-checking/assets/69416199/b1cd6117-3410-4fd8-8f5a-2af6e04bed98)
 ![image](https://github.com/yatshunlee/claim-fact-checking/assets/69416199/78646f09-0061-41ea-84bc-b45eb7bc1aaf)
