@@ -8,10 +8,10 @@ conda activate claim-fact-check
 ```
 ## Usage with OpenAI GPT 3.5
 1. replace with your valid openai api key in `fraud_detection_gpt_3_5.py`
-2. run `python main.py`
+2. run `python main_gpt_3_5.py`
 ## Usage with Google Gemma-2b-it
 1. replace with your valid huggingface access token in `fraud_detection_gemma.py`
-2. run `python main.py`
+2. run `python main_gemma.py`
 ## Architecture
 ![image](https://github.com/yatshunlee/claim-fact-checking/assets/69416199/a530c314-702e-4729-be1a-3159da2e98e1)
 1. Retrieve a statement / query that the user wants to fact-check.
