@@ -10,7 +10,7 @@ conda activate claim-fact-check
 1. replace with your valid openai api key in `frauddetection.py`
 2. run `python main.py`
 ## Architecture
-![image](https://github.com/yatshunlee/claim-fact-checking/assets/69416199/2c6a94ca-9c95-4f64-9cee-346e188f337d)
+![image](https://github.com/yatshunlee/claim-fact-checking/assets/69416199/a530c314-702e-4729-be1a-3159da2e98e1)
 1. Retrieve a statement / query that the user wants to fact-check.
 2. Make it a better google search query: sites, keywords, time range.
 3. Perform webscrapping to get relevant news content about the query: Google Search, NewsPlease.
