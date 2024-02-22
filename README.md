@@ -1,11 +1,21 @@
 # claim-fact-checking
 A cli, python based application to fact check a statement by comparing to relevant and recent news.
 ## Installation
+### Local Environment with Conda
 ```
 git clone https://github.com/yatshunlee/claim-fact-checking.git
 conda env create -f env/environment.yml
 conda activate claim-fact-check
 ```
+### Colab Environment
+```
+!pip install -U -q transformers
+!pip install -U -q accelerate
+!pip install -q news-please
+!pip install -q google
+!pip install -U -q sentence-transformers
+```
+![image](https://github.com/yatshunlee/claim-fact-checking/assets/69416199/abe63700-cc9a-40cc-b7cb-9e10c39f8ccb)
 ## Usage with OpenAI GPT 3.5
 1. replace with your valid openai api key in `fraud_detection_gpt_3_5.py`
 2. run `python main_gpt_3_5.py`
