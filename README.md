@@ -6,8 +6,11 @@ git clone https://github.com/yatshunlee/claim-fact-checking.git
 conda env create -f env/environment.yml
 conda activate claim-fact-check
 ```
-## Usage
-1. replace with your valid openai api key in `frauddetection.py`
+## Usage with OpenAI GPT 3.5
+1. replace with your valid openai api key in `fraud_detection_gpt_3_5.py`
+2. run `python main.py`
+## Usage with Google Gemma-2b-it
+1. replace with your valid huggingface access token in `fraud_detection_gemma.py`
 2. run `python main.py`
 ## Architecture
 ![image](https://github.com/yatshunlee/claim-fact-checking/assets/69416199/a530c314-702e-4729-be1a-3159da2e98e1)
