@@ -79,8 +79,8 @@ class RelevantContextRetriever2:
         
         return context_df.iloc[:3]
         
-        return DataFrame({
-            'date_publish': [context_df['date_publish'].iloc[0]],
-            'title': [context_df['title'].iloc[0]],
-            'sentence': [context_df['maintext'].iloc[0]]
-        })
+        # return DataFrame({
+        #     'date_publish': [context_df['date_publish'].iloc[0]],
+        #     'title': [context_df['title'].iloc[0]],
+        #     'sentence': [context_df['maintext'].iloc[0]]
+        # })
